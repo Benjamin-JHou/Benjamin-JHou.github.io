@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>周俊宇 Junyu Zhou</title>
+  <meta name="description" content="Junyu Zhou, Assistant Researcher at Peking University Institute of Advanced Clinical Medicine." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root{--bg:#080b12;--panel:#0f141d;--line:#27303c;--text:#e6e8ec;--muted:#8d96a6;--gold:#c29a52;--gold2:#e0bd72}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:Outfit,-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;line-height:1.65}
+    a{color:inherit;text-decoration:none}.nav{position:fixed;inset:0 0 auto 0;z-index:10;background:rgba(8,11,18,.82);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
+    .nav-inner{max-width:1120px;margin:auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;gap:18px}.brand{font-size:14px;font-weight:700;letter-spacing:.08em;color:var(--gold2)}
+    .links{display:flex;gap:18px;flex-wrap:wrap}.links a{font-size:13px;color:var(--muted)}.links a:hover{color:var(--text)}
+    main{padding-top:66px}.wrap{max-width:1120px;margin:auto;padding:0 24px}.hero{min-height:calc(100vh - 66px);display:grid;grid-template-columns:.9fr 1.1fr;gap:64px;align-items:center;padding:64px 0 88px}
+    .portrait{border:1px solid var(--line);aspect-ratio:3/4;max-width:380px;overflow:hidden;background:var(--panel)}.portrait img{width:100%;height:100%;object-fit:cover;object-position:top}
+    .eyebrow{display:inline-block;border:1px solid rgba(194,154,82,.35);color:var(--gold2);font-size:12px;letter-spacing:.18em;text-transform:uppercase;padding:6px 10px;margin-bottom:22px}
+    h1{font-size:clamp(44px,6vw,72px);line-height:1;margin:0 0 18px;font-weight:700}h2{font-size:16px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);font-weight:600;margin:0 0 38px}
+    h3{font-size:20px;line-height:1.35;margin:0 0 8px}.lead{font-size:18px;color:var(--muted);max-width:680px}.rule{border-top:1px solid var(--line);padding-top:28px;margin-top:30px}
+    .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:18px 0}.stat{border:1px solid var(--line);padding:18px}.stat strong{display:block;color:var(--gold2);font-size:28px;line-height:1.1}.stat span{font-size:12px;color:var(--muted)}
+    section{border-top:1px solid var(--line);padding:92px 0}.two{display:grid;grid-template-columns:repeat(2,1fr);gap:28px}.card{border:1px solid var(--line);background:rgba(15,20,29,.45);padding:26px}.card:hover{border-color:rgba(194,154,82,.55)}
+    .meta{font-size:13px;color:var(--gold2);letter-spacing:.08em;text-transform:uppercase}.muted{color:var(--muted)}.list{display:grid;gap:12px}.item{display:flex;gap:12px;color:var(--muted);font-size:15px}.dot{width:6px;height:6px;background:var(--gold);margin-top:11px;flex:0 0 auto}
+    .timeline{display:grid;gap:26px}.edu{display:grid;grid-template-columns:1fr auto;gap:24px;border-left:2px solid var(--gold);padding-left:22px}.badge{display:inline-block;border:1px solid rgba(194,154,82,.35);color:var(--gold2);font-size:12px;padding:3px 8px;margin-bottom:8px}
+    .patents{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}.patent p{margin-bottom:0}.awards{display:grid;gap:16px}.award{display:grid;grid-template-columns:90px 1fr auto;gap:18px;align-items:center}.year{font-size:28px;font-weight:700}.level{font-size:12px;color:var(--gold2);border:1px solid rgba(194,154,82,.35);padding:5px 9px}
+    .gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}.photo{border:1px solid var(--line);overflow:hidden;background:var(--panel)}.photo img{width:100%;height:360px;object-fit:cover;filter:grayscale(.35) brightness(.85);transition:.35s}.photo:hover img{filter:none;transform:scale(1.03)}.photo p{margin:0;padding:14px 16px;color:var(--muted)}
+    .contact{display:grid;grid-template-columns:1fr 1fr;gap:48px}.button{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);padding:10px 14px;margin:6px 8px 6px 0}.button:hover{border-color:var(--gold);color:var(--gold2)}
+    footer{border-top:1px solid var(--line);padding:28px 0;color:var(--muted);font-size:12px;text-align:center}
+    @media(max-width:760px){.links{display:none}.hero,.two,.patents,.gallery,.contact{grid-template-columns:1fr}.hero{gap:34px;padding-top:34px}.stats{grid-template-columns:1fr}.edu,.award{grid-template-columns:1fr}.photo img{height:260px}section{padding:68px 0}}
+  </style>
+</head>
+<body>
+  <nav class="nav"><div class="nav-inner"><a class="brand" href="#about">周俊宇 / Junyu Zhou</a><div class="links"><a href="#education">教育</a><a href="#experience">经历</a><a href="#research">研究</a><a href="#awards">荣誉</a><a href="#life">生活</a><a href="#contact">联系</a></div></div></nav>
+  <main>
+    <section id="about" class="wrap hero">
+      <div class="portrait"><img src="https://miaoda-conversation-file.cdn.bcebos.com/user-bnp7wmwuptkw/app-bofgszkndkht/20260516/111.PNG" alt="Junyu Zhou portrait" /></div>
+      <div>
+        <span class="eyebrow">北京大学 · 临床医学高等研究院</span>
+        <h1>周俊宇<br><span style="color:var(--gold2)">Junyu Zhou</span></h1>
+        <p class="lead">助理研究员 · 生物科技与临床医学交叉 · 智能药物开发 · 智能医疗系统</p>
+        <div class="rule">
+          <p class="muted">硕博导师为国际著名代谢学专家 <strong style="color:var(--gold2)">Sunmin Park 教授</strong>（韩国科学院院士）</p>
+          <div class="stats"><div class="stat"><strong>432+</strong><span>发表论文</span></div><div class="stat"><strong>17,101+</strong><span>总被引次数</span></div><div class="stat"><strong>66</strong><span>H 指数</span></div></div>
+          <p class="muted">AD Scientific Index 2023 评选全球顶尖 2% 科学家</p>
+        </div>
+        <div class="rule">
+          <a class="button" href="https://scholar.google.com/citations?hl=en&user=fsxyotsAAAAJ" target="_blank" rel="noopener">Google Scholar</a>
+          <a class="button" href="https://orcid.org/0000-0001-5931-1477" target="_blank" rel="noopener">ORCID</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="wrap">
+      <h2>Academic Roles</h2>
+      <div class="list">
+        <div class="item"><span class="dot"></span><span>北京欧美同学会会员</span></div>
+        <div class="item"><span class="dot"></span><span>全国优秀博士后（全国第三届博士后创新创业大赛银奖）</span></div>
+        <div class="item"><span class="dot"></span><span>省级优秀归国人才</span></div>
+        <div class="item"><span class="dot"></span><span>中国光学学会第四届生物医学光子学专业委员会青年委员</span></div>
+        <div class="item"><span class="dot"></span><span>中国营养学会青年委员 · 韩国食品科学技术学会青年委员</span></div>
+        <div class="item"><span class="dot"></span><span>Biomedical Informatics 期刊编委</span></div>
+      </div>
+    </section>
+
+    <section id="education" class="wrap">
+      <h2>Education</h2>
+      <div class="timeline">
+        <div class="edu"><div><span class="badge">PhD</span><h3>建国大学校（Konkuk University）</h3><p class="muted">博士 · 生物科技融合</p></div><span class="muted">2020.08 – 2024.08</span></div>
+        <div class="edu"><div><h3>建国大学校（Konkuk University）</h3><p class="muted">硕士 · 食品工学</p></div><span class="muted">2018.03 – 2020.03</span></div>
+        <div class="edu"><div><h3>建国大学校（Konkuk University）</h3><p class="muted">学士 · 食品营养</p></div><span class="muted">2013.08 – 2017.08</span></div>
+      </div>
+    </section>
+
+    <section id="experience" class="wrap">
+      <h2>Experience</h2>
+      <div class="two">
+        <article class="card"><p class="meta">博士后研究 · 进行中</p><h3>北京大学 · 临床医学高等研究院</h3><p class="muted">博士后 · 2024.10 – 至今</p></article>
+        <article class="card"><p class="meta">科研与学术任职 · 进行中</p><h3>北京大学 · 临床医学高等研究院</h3><p class="muted">助理研究员 · 2024.10 – 至今</p></article>
+      </div>
+    </section>
+
+    <section id="research" class="wrap">
+      <h2>Research · Patents</h2>
+      <div class="patents">
+        <article class="card patent"><p class="meta">智能医疗硬件</p><h3>AI连续心电监测智能贴片</h3><p class="muted">基于人工智能算法的智能可穿戴贴片，用于实时连续心电图监测和早期心律失常检测。</p></article>
+        <article class="card patent"><p class="meta">药物信息学</p><h3>药物智能提取工艺流程软件</h3><p class="muted">AI 驱动的软件平台，通过智能控制工艺参数和预测产量结果来优化药物提取工作流程。</p></article>
+        <article class="card patent"><p class="meta">化学信息学</p><h3>药物化学合成管理软件</h3><p class="muted">用于追踪、优化和记录药物开发中化学合成过程的综合数字管理系统。</p></article>
+        <article class="card patent"><p class="meta">医疗大数据</p><h3>医疗数据分析系统</h3><p class="muted">处理、可视化并从大规模临床和生物医学数据集中提取可操作洞察的集成分析平台。</p></article>
+      </div>
+    </section>
+
+    <section id="awards" class="wrap">
+      <h2>Awards & Honors</h2>
+      <div class="awards">
+        <article class="card award"><span class="year">2025</span><h3>2025年国际食品科学与技术大会（ICFST 2025）最佳论文奖</h3><span class="level">国际会议</span></article>
+        <article class="card award"><span class="year">2025</span><h3>全国优秀博士后（创新创业大赛银奖）</h3><span class="level">国家级</span></article>
+        <article class="card award"><span class="year">2024</span><h3>省级优秀归国人才</h3><span class="level">省级</span></article>
+      </div>
+    </section>
+
+    <section id="life" class="wrap">
+      <h2>Life · Moments</h2>
+      <div class="gallery">
+        <article class="photo"><img src="https://miaoda-conversation-file.cdn.bcebos.com/user-bnp7wmwuptkw/app-bofgszkndkht/20260516/2cc74c22442da1ace61ae10a9b2f4e.JPG" alt="2025 Nanjing" /><p>2025 · 南京 · 晴空万里，阳光正好</p></article>
+        <article class="photo"><img src="https://miaoda-conversation-file.cdn.bcebos.com/user-bnp7wmwuptkw/app-bofgszkndkht/20260516/75e1931cf055093d1dcb97e696325d.JPG" alt="2024 Chengdu" /><p>2024 · 成都 · 研究间隙的小憩，在茶馆里感受慢生活。</p></article>
+        <article class="photo"><img src="https://miaoda-conversation-file.cdn.bcebos.com/user-bnp7wmwuptkw/app-bofgszkndkht/20260516/740c97df8bf20a3dda18a47d7ad725.JPG" alt="2024 Beijing" /><p>2024 · 北京 · 秋日胡同漫步，古老与现代的交汇中思考。</p></article>
+        <article class="photo"><img src="https://miaoda-conversation-file.cdn.bcebos.com/user-bnp7wmwuptkw/app-bofgszkndkht/20260516/779f7eac95fb7e338f60cfa292ca0b.JPG" alt="2025 Hangzhou" /><p>2025 · 杭州 · 出发啦！去玩啦。</p></article>
+      </div>
+    </section>
+
+    <section id="contact" class="wrap">
+      <h2>Contact</h2>
+      <div class="contact">
+        <div><h3>周俊宇 / Junyu Zhou</h3><p class="muted">北京大学 · 临床医学高等研究院</p><p><a class="button" href="mailto:benjaminjhou@bjmu.edu.cn">benjaminjhou@bjmu.edu.cn</a></p><p class="muted">Beijing, China</p></div>
+        <div><a class="button" href="https://scholar.google.com/citations?hl=en&user=fsxyotsAAAAJ" target="_blank" rel="noopener">Google Scholar</a><a class="button" href="https://orcid.org/0000-0001-5931-1477" target="_blank" rel="noopener">ORCID: 0000-0001-5931-1477</a></div>
+      </div>
+    </section>
+  </main>
+  <footer>© 2025 Junyu Zhou. All Rights Reserved.</footer>
+</body>
+</html>
