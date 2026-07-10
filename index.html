@@ -5,71 +5,294 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="alternate icon" href="/favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-    <script type="module" crossorigin src="/assets/index-CWNSsxO6.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-_3DK5mf_.css">
-    <script>
-              (function () {
-                const redirect = new URLSearchParams(location.search).get('redirect');
-                if (redirect && redirect !== location.pathname) {
-                  history.replaceState(null, '', redirect);
-                }
-              })();
-            </script>
-    <link rel="stylesheet" id="fonts-code" href="https://miaoda-font.cdn.bcebos.com/static/font_v1/fonts-code.css">
+    <title>Junyu Zhou (周俊宇) - Peking University</title>
+    <meta name="description" content="Personal academic homepage of Junyu Zhou, Assistant Researcher at Peking University. Researching biotech & clinical medicine, smart drug development, and intelligent medical systems." />
+    
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="/index.css" />
+    
+    <!-- Lucide Icons (CDN) -->
+    <script src="https://unpkg.com/lucide@latest"></script>
   </head>
   <body>
-    <div id="root"></div>
-    <script id="md-click">
-              window.mdClick = e => {
-                const target = e.target;
-                const {href, target: linkTarget} = target.dataset;
-                const appType = 'web';
-                const isBlank = linkTarget === '_blank';
+    <!-- Ambient glowing backdrops -->
+    <div class="ambient-glow"></div>
 
-                if (!href) return;
+    <!-- ==========================================================================
+       HEADER & NAVIGATION
+       ========================================================================== -->
+    <header class="navbar">
+      <div class="navbar-container">
+        <a href="#about" class="logo">
+          <span>Junyu Zhou</span>
+          <span class="logo-dot"></span>
+        </a>
+        <nav class="nav-links">
+          <a href="#about" class="nav-link active" data-i18n="nav.about">关于我</a>
+          <a href="#education" class="nav-link" data-i18n="nav.education">教育背景</a>
+          <a href="#experience" class="nav-link" data-i18n="nav.experience">工作经历</a>
+          <a href="#research" class="nav-link" data-i18n="nav.research">研究成果</a>
+          <a href="#awards" class="nav-link" data-i18n="nav.awards">学术荣誉</a>
+          <a href="#gallery" class="nav-link" data-i18n="nav.gallery">生活</a>
+          <a href="#contact" class="nav-link" data-i18n="nav.contact">联系方式</a>
+        </nav>
+        <div class="nav-controls">
+          <button id="lang-toggle" class="lang-btn">
+            <span id="lang-text">EN</span>
+          </button>
+        </div>
+      </div>
+    </header>
 
-                e.stopPropagation();
-                e.preventDefault();
+    <!-- ==========================================================================
+       HERO / ABOUT SECTION
+       ========================================================================== -->
+    <section id="about" class="hero">
+      <div class="section-container hero-grid">
+        <!-- Profile details -->
+        <div class="hero-content">
+          <div class="profile-area">
+            <div class="profile-frame">
+              <img class="profile-img" src="https://miaoda-conversation-file.cdn.bcebos.com/user-bnp7wmwuptkw/app-bofgszkndkht/20260516/111.PNG" alt="Junyu Zhou" />
+            </div>
+            <div class="hero-meta">
+              <span class="tech-badge" data-i18n="about.badge">北京大学 · 临床医学高等研究院</span>
+              <h1 class="hero-title text-gradient-blue" data-i18n="about.name">周俊宇</h1>
+            </div>
+          </div>
+          <p class="hero-tagline" data-i18n="about.title">助理研究员 · 生物科技与临床医学交叉 · 智能药物开发 · 智能医疗系统</p>
+          
+          <div class="mentor-box" data-i18n="about.mentorText">
+            硕博导师为国际著名代谢学专家 <strong>Sunmin Park 教授</strong>（韩国科学院院士）
+          </div>
 
-                // 外部链接或新窗口打开
-                if (isBlank || href.startsWith('http')) {
-                  let finalHref = href;
-                  if (appType === 'miniapp' && !href.startsWith('http')) {
-                    finalHref = window.location.href.split('#')[0] + '#/' + href;
-                  }
-                  window.open(finalHref, linkTarget || '_self');
-                  return;
-                }
+          <!-- Counter Stats Panels -->
+          <div class="stats-grid">
+            <div class="stat-card glass-card">
+              <div class="stat-value">432+</div>
+              <div class="stat-label" data-i18n="about.papers">发表论文</div>
+            </div>
+            <div class="stat-card glass-card">
+              <div class="stat-value">17,101+</div>
+              <div class="stat-label" data-i18n="about.citations">总被引次数</div>
+            </div>
+            <div class="stat-card glass-card">
+              <div class="stat-value">66</div>
+              <div class="stat-label" data-i18n="about.hIndex">H 指数</div>
+            </div>
+          </div>
+          <div class="scientist-note" data-i18n="about.scientistNote">
+            🏆 AD Scientific Index 评选全球顶尖 2% 科学家
+          </div>
 
-                // 内部路由跳转
-                const finalHref = href.startsWith('/') ? href : '/' + href;
-                if (appType === 'miniapp') {
-                  window.location.hash = finalHref;
-                  window.dispatchEvent(new HashChangeEvent('hashchange'));
-                } else {
-                  window.history.pushState({}, '', finalHref);
-                  window.dispatchEvent(new Event('popstate'));
-                }
-              };
-              document.addEventListener('click', window.mdClick, true);
-            </script>
-    <script id="iframe-onerror-catcher">
-              const observer = new PerformanceObserver((list) => {
-                list.getEntries().forEach((entry) => {
-                  if (entry.initiatorType === 'script' && entry.responseStatus >= 400) {
-                    window.parent.postMessage({
-                      type: "RESOURCE_LOAD_ERROR",
-                      name: entry.name,
-                      status: entry.responseStatus
-                    }, "*");
-                    console.warn('[iframe-error] Resource failed:', entry.name, entry.responseStatus);
-                  }
-                });
-              });
-              observer.observe({ type: 'resource', buffered: true });
-            </script>
+          <!-- Academic Social Profiles -->
+          <div class="identities-container" style="margin-top: 16px;">
+            <h3 class="identities-title" data-i18n="about.profileTitle">学术档案与学术主页</h3>
+            <div class="academic-links-row">
+              <a href="https://scholar.google.com/citations?hl=en&user=fsxyotsAAAAJ" target="_blank" class="social-btn">
+                <i data-lucide="graduation-cap" style="width: 16px; height: 16px;"></i>
+                <span data-i18n="about.googleScholar">Google Scholar</span>
+              </a>
+              <a href="https://orcid.org/0000-0001-5931-1477" target="_blank" class="social-btn">
+                <i data-lucide="award" style="width: 16px; height: 16px;"></i>
+                <span data-i18n="about.orcid">ORCID</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- High-tech Code editor Visualization -->
+        <div class="hero-visual">
+          <div class="code-container glass-card hero-visual-card">
+            <div class="code-header">
+              <div class="code-dots">
+                <span class="code-dot red"></span>
+                <span class="code-dot yellow"></span>
+                <span class="code-dot green"></span>
+              </div>
+              <span>research_interests.json</span>
+            </div>
+            <pre><code>{
+  <span class="code-keyword">"researcher"</span>: <span class="code-string">"Dr. Junyu Zhou"</span>,
+  <span class="code-keyword">"institution"</span>: <span class="code-string">"Peking University"</span>,
+  <span class="code-keyword">"domain"</span>: <span class="code-string">"Smart Medicine & Bioinformatics"</span>,
+  <span class="code-keyword">"core_pillars"</span>: [
+    <span class="code-string">"AI-Driven ECG Monitoring Patches"</span>,
+    <span class="code-string">"Intelligent Pharmaceutical Synthesis"</span>,
+    <span class="code-string">"Medical Multimodal Big Data Analytics"</span>,
+    <span class="code-string">"Biotech & Clinical Medicine Crossings"</span>
+  ],
+  <span class="code-keyword">"academic_impact"</span>: {
+    <span class="code-keyword">"global_scientist_index"</span>: <span class="code-string">"Top 2% Globally"</span>,
+    <span class="code-keyword">"total_citations"</span>: <span class="code-string">"17,101+"</span>,
+    <span class="code-keyword">"h_index"</span>: <span class="code-property">66</span>
+  },
+  <span class="code-keyword">"status"</span>: <span class="code-string">"Active Collaboration Open"</span>
+}</code></pre>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Academic Social/Societal Appointments Section -->
+      <div class="section-container" style="padding-top: 0; padding-bottom: 20px;">
+        <h3 class="identities-title" data-i18n="about.identityTitle">学术身份与社会任职</h3>
+        <div id="academic-identities" class="identities-list">
+          <!-- Populated Dynamically by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+       EDUCATION & EXPERIENCE SECTION
+       ========================================================================== -->
+    <section id="education">
+      <div class="section-container timeline-section-grid">
+        <!-- Education column -->
+        <div>
+          <div class="section-header" style="text-align: left; margin-bottom: 32px;">
+            <h2 class="section-title text-gradient-accent" data-i18n="education.title">教育背景</h2>
+          </div>
+          <div id="education-timeline" class="timeline-wrapper">
+            <!-- Populated Dynamically by JS -->
+          </div>
+        </div>
+
+        <!-- Experience column -->
+        <div id="experience">
+          <div class="section-header" style="text-align: left; margin-bottom: 32px;">
+            <h2 class="section-title text-gradient-accent" data-i18n="experience.title">工作经历</h2>
+          </div>
+          <div id="experience-timeline" class="timeline-wrapper">
+            <!-- Populated Dynamically by JS -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+       RESEARCH & PATENTS SECTION
+       ========================================================================== -->
+    <section id="research">
+      <div class="section-container">
+        <div class="section-header">
+          <h2 class="section-title text-gradient-accent" data-i18n="research.title">研究成果</h2>
+          <p class="section-subtitle" data-i18n="research.subtitle">专利成果</p>
+        </div>
+        <div id="patents-grid" class="patents-grid">
+          <!-- Populated Dynamically by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+       AWARDS & HONORS SECTION
+       ========================================================================== -->
+    <section id="awards">
+      <div class="section-container">
+        <div class="section-header">
+          <h2 class="section-title text-gradient-accent" data-i18n="awards.title">学术荣誉与奖项</h2>
+        </div>
+        <div id="awards-list" class="awards-list">
+          <!-- Populated Dynamically by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+       LIFE MOMENTS GALLERY SECTION
+       ========================================================================== -->
+    <section id="gallery">
+      <div class="section-container">
+        <div class="section-header">
+          <h2 class="section-title text-gradient-accent" data-i18n="gallery.title">生活瞬间</h2>
+          <p class="section-subtitle" data-i18n="gallery.subtitle">科研之余的点滴</p>
+        </div>
+        <div id="gallery-grid" class="gallery-grid">
+          <!-- Populated Dynamically by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+       CONTACT & FOOTER SECTION
+       ========================================================================== -->
+    <section id="contact" style="padding-bottom: 80px;">
+      <div class="section-container">
+        <div class="contact-card glass-card">
+          <div class="contact-layout">
+            <!-- Left detail column -->
+            <div class="contact-info">
+              <h2 class="contact-header-name" data-i18n="contact.name">周俊宇</h2>
+              <p class="contact-affiliation" data-i18n="contact.affiliation">北京大学 · 临床医学高等研究院</p>
+              
+              <div class="contact-methods">
+                <div class="contact-method">
+                  <div class="contact-icon">
+                    <i data-lucide="mail" style="width: 18px; height: 18px;"></i>
+                  </div>
+                  <div>
+                    <div style="font-size: 0.75rem; color: var(--text-muted);" data-i18n="contact.emailLabel">学术邮箱</div>
+                    <div>benjaminjhou@bjmu.edu.cn</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right call to action column -->
+            <div class="contact-action">
+              <button onclick="window.location.href='mailto:benjaminjhou@bjmu.edu.cn'" class="action-btn">
+                <i data-lucide="send" style="width: 18px; height: 18px;"></i>
+                <span data-i18n="contact.actionBtn">发送电子邮件</span>
+              </button>
+              
+              <div class="academic-links-row">
+                <a href="https://scholar.google.com/citations?hl=en&user=fsxyotsAAAAJ" target="_blank" class="social-btn">
+                  <i data-lucide="graduation-cap" style="width: 16px; height: 16px;"></i>
+                  <span>Google Scholar</span>
+                </a>
+                <a href="https://orcid.org/0000-0001-5931-1477" target="_blank" class="social-btn">
+                  <i data-lucide="award" style="width: 16px; height: 16px;"></i>
+                  <span>ORCID</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+       FOOTER
+       ========================================================================== -->
+    <footer class="footer">
+      <div class="section-container" style="padding: 0;">
+        <p data-i18n="contact.copyright">© 2026 Junyu Zhou. 保留所有权利。</p>
+      </div>
+    </footer>
+
+    <!-- ==========================================================================
+       LIGHTBOX OVERLAY MODAL
+       ========================================================================== -->
+    <div id="lightbox" class="lightbox">
+      <button id="lightbox-close" class="lightbox-close">
+        <i data-lucide="x" style="width: 20px; height: 20px;"></i>
+      </button>
+      <div class="lightbox-content">
+        <img id="lightbox-img" class="lightbox-img" src="" alt="Moment Preview" />
+        <div class="lightbox-caption">
+          <h3 id="lightbox-title" class="lightbox-title">Nanjing</h3>
+          <p id="lightbox-desc" class="lightbox-desc">Moment Details</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==========================================================================
+       SCRIPTS
+       ========================================================================== -->
+    <script src="/index.js"></script>
+    <script>
+      // Initialize Lucide Icons on load
+      lucide.createIcons();
+    </script>
   </body>
 </html>
