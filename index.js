@@ -13,15 +13,15 @@ const siteData = {
             contact: "联系方式"
         },
         about: {
-            badge: "北京大学 · 临床医学高等研究院",
+            badge: "北京大学 · <br />临床医学高等研究院",
             name: "周俊宇",
             title: "助理研究员 · 生物科技与临床医学交叉 · 智能药物开发 · 智能医疗系统",
             mentorTitle: "导师背景",
             mentorText: "硕博导师为国际著名代谢学专家 <strong>Sunmin Park 教授</strong>（韩国科学院院士）",
-            papers: "发表论文",
-            citations: "总被引次数",
-            hIndex: "H 指数",
-            scientistNote: "🏆 AD Scientific Index 评选全球顶尖 2% 科学家",
+            papers: "导师发表论文",
+            citations: "导师总被引",
+            hIndex: "导师 H 指数",
+            scientistNote: "🏆 硕博导师入选 AD Scientific Index 全球顶尖 2% 科学家",
             identityTitle: "学术身份与社会任职",
             profileTitle: "学术档案与学术主页",
             googleScholar: "Google Scholar",
@@ -183,15 +183,15 @@ const siteData = {
             contact: "Contact"
         },
         about: {
-            badge: "Peking University · Institute of Advanced Clinical Medicine",
+            badge: "Peking University · <br />Institute of Advanced Clinical Medicine",
             name: "Junyu Zhou",
             title: "Assistant Researcher · Biotech & Clinical Medicine · Smart Drug Development · Intelligent Medical Systems",
             mentorTitle: "Advisor Background",
             mentorText: "PhD & MSc Advisor: renowned metabolism expert <strong>Prof. Sunmin Park</strong> (Member, Korean Academy of Science and Technology)",
-            papers: "Publications",
-            citations: "Citations",
-            hIndex: "H-Index",
-            scientistNote: "🏆 Ranked in top 2% globally by AD Scientific Index 2023",
+            papers: "Advisor's Publications",
+            citations: "Advisor's Citations",
+            hIndex: "Advisor's H-Index",
+            scientistNote: "🏆 Advisor ranked in top 2% globally by AD Scientific Index 2023",
             identityTitle: "Academic Roles & Appointments",
             profileTitle: "Academic Profiles & Research Hubs",
             googleScholar: "Google Scholar",
@@ -347,17 +347,12 @@ const siteData = {
 /* ==========================================================================
    STATE MANAGEMENT
    ========================================================================== */
-let currentLang = 'zh';
+let currentLang = 'en'; // Default language is English
 
 // Check browser preferred language
 const savedLang = localStorage.getItem('site-lang');
 if (savedLang === 'zh' || savedLang === 'en') {
     currentLang = savedLang;
-} else {
-    const userLang = navigator.language || navigator.userLanguage;
-    if (userLang.startsWith('en')) {
-        currentLang = 'en';
-    }
 }
 
 /* ==========================================================================
@@ -384,8 +379,8 @@ function updateLanguage() {
         }
         
         if (val !== undefined) {
-            // Check if element contains html tags (like strong)
-            if (path.includes('mentorText')) {
+            // Check if element contains html tags (like <br /> or <strong>)
+            if (typeof val === 'string' && val.includes('<')) {
                 element.innerHTML = val;
             } else {
                 element.textContent = val;
