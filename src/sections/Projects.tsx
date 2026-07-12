@@ -1,9 +1,38 @@
-import { useRef } from 'react'
+import { useRef, useState } from 'react'
 import { motion, useScroll, useTransform, type MotionValue } from 'framer-motion'
 import { useLanguage } from '../context/LanguageContext'
 import { patents } from '../data/content'
-import FadeIn from '../components/FadeIn'
 import LiveProjectButton from '../components/LiveProjectButton'
+
+function CardGlow({ children }: { children: React.ReactNode }) {
+  const ref = useRef<HTMLDivElement>(null)
+  const [pos, setPos] = useState({ x: 0, y: 0 })
+  const [hovering, setHovering] = useState(false)
+
+  const handleMove = (e: React.MouseEvent) => {
+    if (!ref.current) return
+    const rect = ref.current.getBoundingClientRect()
+    setPos({ x: e.clientX - rect.left, y: e.clientY - rect.top })
+    setHovering(true)
+  }
+
+  return (
+    <div ref={ref} onMouseMove={handleMove} onMouseLeave={() => setHovering(false)} className="relative overflow-hidden rounded-[40px] sm:rounded-[50px] md:rounded-[60px]">
+      {hovering && (
+        <motion.div
+          className="pointer-events-none absolute inset-0 z-0"
+          style={{
+            background: `radial-gradient(300px circle at ${pos.x}px ${pos.y}px, rgba(124,58,237,0.08), transparent 60%)`,
+          }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+        />
+      )}
+      {children}
+    </div>
+  )
+}
 
 function ProjectCard({
   patent,
@@ -26,27 +55,29 @@ function ProjectCard({
       className="sticky top-24 md:top-32 h-[85vh] flex items-center justify-center"
       style={{ top: `${index * 28}px` }}
     >
-      <motion.div
-        style={{ scale }}
-        className="w-full max-w-4xl rounded-[40px] sm:rounded-[50px] md:rounded-[60px] border-2 border-[#D7E2EA] bg-[#0C0C0C] p-5 sm:p-6 md:p-8"
-      >
-        <div className="flex flex-col lg:flex-row gap-6 md:gap-8 items-start">
-          <div className="flex-1">
-            <span className="text-[#D7E2EA]/40 font-medium text-xs sm:text-sm uppercase tracking-widest">
-              {patent.field}
-            </span>
-            <h3 className="text-[#D7E2EA] font-bold text-[clamp(1.3rem,2.5vw,2rem)] mt-2 leading-tight">
-              {patent.name}
-            </h3>
-            <p className="text-[#D7E2EA]/60 font-light text-[clamp(0.85rem,1vw,1rem)] mt-4 leading-relaxed">
-              {patent.desc}
-            </p>
-            <div className="mt-6">
-              <LiveProjectButton>{t.viewDetails}</LiveProjectButton>
+      <CardGlow>
+        <motion.div
+          style={{ scale }}
+          className="relative w-full max-w-4xl border-2 border-[#D7E2EA] bg-[#0C0C0C]/90 backdrop-blur-sm p-5 sm:p-6 md:p-8 z-10"
+        >
+          <div className="flex flex-col lg:flex-row gap-6 md:gap-8 items-start">
+            <div className="flex-1">
+              <span className="text-[#D7E2EA]/40 font-medium text-xs sm:text-sm uppercase tracking-widest">
+                {patent.field}
+              </span>
+              <h3 className="text-[#D7E2EA] font-bold text-[clamp(1.3rem,2.5vw,2rem)] mt-2 leading-tight">
+                {patent.name}
+              </h3>
+              <p className="text-[#D7E2EA]/60 font-light text-[clamp(0.85rem,1vw,1rem)] mt-4 leading-relaxed">
+                {patent.desc}
+              </p>
+              <div className="mt-6">
+                <LiveProjectButton>{t.viewDetails}</LiveProjectButton>
+              </div>
             </div>
           </div>
-        </div>
-      </motion.div>
+        </motion.div>
+      </CardGlow>
     </div>
   )
 }
@@ -67,11 +98,11 @@ export default function Projects() {
       className="relative bg-[#0C0C0C] rounded-t-[40px] sm:rounded-t-[50px] md:rounded-t-[60px] -mt-10 sm:-mt-12 md:-mt-14 z-10 overflow-x-clip"
     >
       <div className="px-6 sm:px-10 md:px-16 pt-16 sm:pt-20 md:pt-24 pb-8">
-        <FadeIn delay={0} y={30}>
+        <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.7 }}>
           <h2 className="hero-heading font-black text-[clamp(2.5rem,6vw,5rem)] text-center">
             {t.projects.title}
           </h2>
-        </FadeIn>
+        </motion.div>
       </div>
 
       <div className="relative px-6 sm:px-10 md:px-16">
@@ -85,7 +116,6 @@ export default function Projects() {
             t={t.projects}
           />
         ))}
-
         <div className="h-[20vh]" />
       </div>
     </section>

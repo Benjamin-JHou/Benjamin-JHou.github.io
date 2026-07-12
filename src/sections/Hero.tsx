@@ -97,12 +97,23 @@ export default function Hero() {
         </div>
 
         <FadeIn delay={0.6} y={30} x={30}>
-          <div className="relative w-48 h-48 sm:w-56 sm:h-56 md:w-72 md:h-72 rounded-full overflow-hidden border-2 border-[#D7E2EA]/20 shrink-0">
-            <img
-              src="/avatar.jpg"
-              alt={t.hero.name}
-              className="w-full h-full object-cover"
+          <div className="relative shrink-0">
+            <motion.div
+              className="absolute inset-0 rounded-full"
+              style={{
+                background: 'radial-gradient(circle, rgba(124,58,237,0.25) 0%, rgba(59,130,246,0.1) 50%, transparent 70%)',
+                filter: 'blur(20px)',
+              }}
+              animate={{ scale: [1, 1.15, 1], opacity: [0.6, 1, 0.6] }}
+              transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
             />
+            <div className="relative w-48 h-48 sm:w-56 sm:h-56 md:w-72 md:h-72 rounded-full overflow-hidden border-2 border-[#D7E2EA]/20">
+              <img
+                src="/avatar.jpg"
+                alt={t.hero.name}
+                className="w-full h-full object-cover"
+              />
+            </div>
           </div>
         </FadeIn>
       </div>
