@@ -421,6 +421,184 @@ export const en: LangContent = {
   },
 }
 
+export const fr: LangContent = {
+  nav: {
+    about: 'À propos',
+    education: 'Formation',
+    experience: 'Expérience',
+    expertise: 'Expertise',
+    projects: 'Recherche',
+    gallery: 'Vie',
+    contact: 'Contact',
+  },
+  hero: {
+    name: 'Junyu Zhou',
+    title: 'Chercheur associé · Biotech & Médecine clinique · Développement intelligent de médicaments · Systèmes médicaux intelligents',
+    affiliation: 'Université de Pékin · Institut de médecine clinique avancée',
+    intro: 'Relier l\'intelligence artificielle et la médecine clinique pour faire progresser les soins de santé grâce à la recherche innovante et à la science translationnelle.',
+    papersLabel: 'Publications',
+    papersValue: '32+',
+    citationsLabel: 'Citations',
+    citationsValue: '640+',
+    hIndexLabel: 'Indice H',
+    hIndexValue: '12',
+    achievementTitle: 'Réalisations académiques clés',
+    achievementText: 'Médaille d\'argent du Concours national d\'innovation postdoctorale, titre de Postdoctorant d\'excellence national, Talent de retour exceptionnel provincial, Membre du comité jeunesse de photonique biomédicale de la Société optique chinoise.',
+    publications: 'Premier auteur dans Expert Systems with Applications, Journal of Translational Internal Medicine, Journal of Chemical Information and Modeling, Food & Function et d\'autres revues internationales de premier plan.',
+  },
+  identities: [
+    'Membre, Association des chercheurs de retour de l\'Ouest, Pékin',
+    'Postdoctorant d\'excellence national (Médaille d\'argent, 3e Concours national d\'innovation postdoctorale)',
+    'Talent de retour exceptionnel provincial',
+    'Membre du comité jeunesse, 4e Comité de photonique biomédicale, Société optique chinoise',
+    'Membre du comité jeunesse, Société chinoise de nutrition',
+    'Membre du comité jeunesse, Société coréenne des sciences et technologies alimentaires',
+    'Comité éditorial, Biomedical Informatics Journal',
+  ],
+  about: {
+    title: 'À propos',
+    paragraph: 'Le Dr Junyu Zhou est chercheur associé à l\'Institut de médecine clinique avancée de l\'Université de Pékin. Ses recherches se concentrent sur l\'intersection de l\'imagerie médicale intelligente, de l\'informatique clinique et de la chimie pharmaceutique pilotée par l\'IA. Il a été investigateur clé sur la technologie de neuromodulation cognitive cérébrale (Programme national clé de R&D, 2025) et la surveillance tumorale multimodale non invasive en temps réel (NSFC, 2024). Il a publié plus de 32 articles avec un facteur d\'impact cumulé supérieur à 210 et 640+ citations, et détient 1 brevet de modèle d\'utilité national et 3 droits d\'auteur logiciels.',
+    identityTitle: 'Rôles et nominations académiques',
+  },
+  education: {
+    title: 'Formation',
+    phdBadge: 'PhD',
+    list: [
+      { period: 'Août 2020 – Août 2024', school: '', degree: 'Doctorat', major: 'Convergence biotechnologique', isPhD: true },
+      { period: 'Mars 2018 – Mars 2020', school: '', degree: 'Master', major: 'Génie alimentaire', isPhD: false },
+      { period: 'Août 2013 – Août 2017', school: '', degree: 'Licence', major: 'Alimentation et nutrition', isPhD: false },
+    ],
+  },
+  experience: {
+    title: 'Expérience',
+    current: 'Actuel',
+    list: [
+      { type: 'Recherche postdoctorale', period: 'Oct 2024 – Présent', title: 'Université de Pékin · Institut de médecine clinique avancée', subtitle: 'Chercheur associé', isCurrent: true },
+    ],
+  },
+  expertise: { title: 'Expertise' },
+  projects: { title: 'Recherche', patent: 'Brevet', viewDetails: 'Voir détails' },
+  awards: {
+    title: 'Prix et distinctions',
+    latest: 'Récent',
+    list: [
+      { year: '2025', title: 'Prix du meilleur article, ICFST 2025', level: 'Conf. Intl.', isLatest: true },
+      { year: '2025', title: 'Postdoctorant d\'excellence national (Médaille d\'argent)', level: 'Prix national', isLatest: true },
+      { year: '2024', title: 'Talent de retour exceptionnel provincial', level: 'Distinction provinciale', isLatest: false },
+    ],
+  },
+  gallery: {
+    title: 'Moments de vie',
+    subtitle: 'Aperçus hors du laboratoire',
+    photos: [
+      { src: 'https://miaoda-conversation-file.cdn.bcebos.com/user-bnp7wmwuptkw/app-bofgszkndkht/20260516/2cc74c22442da1ace61ae10a9b2f4e.JPG', label: '2025 · Nanjing', desc: 'Ciel clair, soleil parfait.', aspect: 'aspect-square' },
+      { src: 'https://miaoda-conversation-file.cdn.bcebos.com/user-bnp7wmwuptkw/app-bofgszkndkht/20260516/75e1931cf055093d1dcb97e696325d.JPG', label: '2024 · Chengdu', desc: 'Une brève pause, savourer le rythme lent dans une maison de thé.', aspect: 'aspect-3-4' },
+      { src: 'https://miaoda-conversation-file.cdn.bcebos.com/user-bnp7wmwuptkw/app-bofgszkndkht/20260516/740c97df8bf20a3dda18a47d7ad725.JPG', label: '2024 · Pékin', desc: 'Promenade automnale dans les hutongs de Pékin.', aspect: 'aspect-4-5' },
+      { src: 'https://miaoda-conversation-file.cdn.bcebos.com/user-bnp7wmwuptkw/app-bofgszkndkht/20260516/779f7eac95fb7e338f60cfa292ca0b.JPG', label: '2025 · Hangzhou', desc: 'En route ! Il est temps de voyager.', aspect: 'aspect-3-4' },
+    ],
+  },
+  contact: {
+    title: 'Contact',
+    name: 'Junyu Zhou',
+    affiliation: 'Université de Pékin · Institut de médecine clinique avancée',
+    emailLabel: 'Email académique',
+    email: 'benjaminjhou@bjmu.edu.cn',
+    actionBtn: 'Envoyer un email',
+    copyright: '© 2026 Junyu Zhou. Tous droits réservés.',
+    googleScholar: 'Google Scholar',
+    orcid: 'ORCID',
+  },
+}
+
+export const ko: LangContent = {
+  nav: {
+    about: '소개',
+    education: '학력',
+    experience: '경력',
+    expertise: '전문 분야',
+    projects: '연구',
+    gallery: '일상',
+    contact: '연락처',
+  },
+  hero: {
+    name: 'Junyu Zhou',
+    title: '부연구원 · 생명공학 및 임상의학 · 스마트 약물 개발 · 지능형 의료 시스템',
+    affiliation: '베이징대학교 · 임상의학고등연구원',
+    intro: '인공지능과 임상의학의 융합을 통해 혁신적인 연구와 중개 과학으로 의료 발전에 기여합니다.',
+    papersLabel: '논문',
+    papersValue: '32+',
+    citationsLabel: '인용',
+    citationsValue: '640+',
+    hIndexLabel: 'H-Index',
+    hIndexValue: '12',
+    achievementTitle: '주요 학술 성과',
+    achievementText: '전국 박사후 혁신창업대회 은상 수상, 국가 우수 박사후 칭호, 성급 우수 귀국 인재, 중국광학학회 생물의학광자학위원회 청년위원.',
+    publications: 'Expert Systems with Applications, Journal of Translational Internal Medicine, Journal of Chemical Information and Modeling, Food & Function 등 국제 최상위 저널에 제1저자로 논문 게재.',
+  },
+  identities: [
+    '베이징 구미동창회 회원',
+    '국가 우수 박사후 (제3회 전국 박사후 혁신창업대회 은상)',
+    '성급 우수 귀국 인재',
+    '중국광학학회 제4회 생물의학광자학위원회 청년위원',
+    '중국영양학회 청년위원',
+    '한국식품과학기술학회 청년위원',
+    'Biomedical Informatics 저널 편집위원',
+  ],
+  about: {
+    title: '소개',
+    paragraph: '주준우 박사는 베이징대학교 임상의학고등연구원의 부연구원입니다. 그의 연구는 지능형 의료 영상, 임상 정보학 및 AI 기반 제약 화학의 융합에 중점을 두고 있습니다. 뇌 인지 신경 조절 기술(국가 중점 R&D 프로그램, 2025)과 다중 모드 비침습적 실시간 종양 세포 모니터링(NSFC, 2024)의 핵심 연구원으로 활동했습니다. 32편 이상의 논문을 발표했으며, 총 영향력 지수 210 이상, 640회 이상 인용되었고, 국가 실용신안 특허 1건과 소프트웨어 저작권 3건을 보유하고 있습니다.',
+    identityTitle: '학술 직책',
+  },
+  education: {
+    title: '학력',
+    phdBadge: 'PhD',
+    list: [
+      { period: '2020.08 – 2024.08', school: '', degree: '박사', major: '생명공학 융합', isPhD: true },
+      { period: '2018.03 – 2020.03', school: '', degree: '석사', major: '식품공학', isPhD: false },
+      { period: '2013.08 – 2017.08', school: '', degree: '학사', major: '식품영양', isPhD: false },
+    ],
+  },
+  experience: {
+    title: '경력',
+    current: '현재',
+    list: [
+      { type: '박사후 연구', period: '2024.10 – 현재', title: '베이징대학교 · 임상의학고등연구원', subtitle: '부연구원', isCurrent: true },
+    ],
+  },
+  expertise: { title: '전문 분야' },
+  projects: { title: '연구', patent: '특허', viewDetails: '자세히 보기' },
+  awards: {
+    title: '수상 및 영예',
+    latest: '최신',
+    list: [
+      { year: '2025', title: 'ICFST 2025 최우수 논문상', level: '국제 학회', isLatest: true },
+      { year: '2025', title: '국가 우수 박사후 (혁신창업대회 은상)', level: '국가상', isLatest: true },
+      { year: '2024', title: '성급 우수 귀국 인재', level: '성급 영예', isLatest: false },
+    ],
+  },
+  gallery: {
+    title: '일상의 순간',
+    subtitle: '연구실 밖의 모습',
+    photos: [
+      { src: 'https://miaoda-conversation-file.cdn.bcebos.com/user-bnp7wmwuptkw/app-bofgszkndkht/20260516/2cc74c22442da1ace61ae10a9b2f4e.JPG', label: '2025 · 난징', desc: '맑은 하늘, 완벽한 햇살.', aspect: 'aspect-square' },
+      { src: 'https://miaoda-conversation-file.cdn.bcebos.com/user-bnp7wmwuptkw/app-bofgszkndkht/20260516/75e1931cf055093d1dcb97e696325d.JPG', label: '2024 · 청두', desc: '연구 중 잠시 휴식, 찻집에서 느긋한 시간을 즐기며.', aspect: 'aspect-3-4' },
+      { src: 'https://miaoda-conversation-file.cdn.bcebos.com/user-bnp7wmwuptkw/app-bofgszkndkht/20260516/740c97df8bf20a3dda18a47d7ad725.JPG', label: '2024 · 베이징', desc: '베이징 후퉁의 가을 산책.', aspect: 'aspect-4-5' },
+      { src: 'https://miaoda-conversation-file.cdn.bcebos.com/user-bnp7wmwuptkw/app-bofgszkndkht/20260516/779f7eac95fb7e338f60cfa292ca0b.JPG', label: '2025 · 항저우', desc: '출발! 여행과 탐험의 시간.', aspect: 'aspect-3-4' },
+    ],
+  },
+  contact: {
+    title: '연락처',
+    name: 'Junyu Zhou',
+    affiliation: '베이징대학교 · 임상의학고등연구원',
+    emailLabel: '학술 이메일',
+    email: 'benjaminjhou@bjmu.edu.cn',
+    actionBtn: '이메일 보내기',
+    copyright: '© 2026 Junyu Zhou. All Rights Reserved.',
+    googleScholar: 'Google Scholar',
+    orcid: 'ORCID',
+  },
+}
+
 const patents_zh = [
   {
     name: 'AI连续心电监测智能贴片',
@@ -467,7 +645,7 @@ const patents_en = [
   },
 ]
 
-export const patents = { zh: patents_zh, en: patents_en }
+export const patents = { zh: patents_zh, en: patents_en, fr: patents_zh, ko: patents_zh }
 
 export const expertiseItems = {
   zh: [
@@ -522,6 +700,60 @@ export const expertiseItems = {
       number: '05',
       name: 'Wearable Health Technology',
       description: 'Designing and validating AI-powered wearable devices for continuous health monitoring, including smart ECG patches and multi-sensor integration platforms.',
+    },
+  ],
+  fr: [
+    {
+      number: '01',
+      name: 'Diagnostic par IA',
+      description: 'Développement de modèles d\'apprentissage profond pour l\'analyse automatisée de l\'imagerie médicale et des signaux physiologiques, permettant une détection précoce et un diagnostic de précision.',
+    },
+    {
+      number: '02',
+      name: 'Traitement du signal biomédical',
+      description: 'Traitement et interprétation avancés des signaux ECG, EEG et biosignaux multimodaux à l\'aide de techniques de traitement du signal et d\'apprentissage automatique.',
+    },
+    {
+      number: '03',
+      name: 'Analyse de données cliniques',
+      description: 'Exploitation de grands ensembles de données cliniques pour découvrir des modèles, prédire des résultats et soutenir la prise de décision fondée sur des preuves.',
+    },
+    {
+      number: '04',
+      name: 'Recherche translationnelle',
+      description: 'Relier les découvertes de laboratoire aux applications cliniques, du prototypage de dispositifs médicaux aux études de validation clinique.',
+    },
+    {
+      number: '05',
+      name: 'Technologie de santé portable',
+      description: 'Conception et validation de dispositifs portables alimentés par l\'IA pour la surveillance continue de la santé, y compris les patchs ECG intelligents.',
+    },
+  ],
+  ko: [
+    {
+      number: '01',
+      name: 'AI 기반 진단',
+      description: '의료 영상 및 생리 신호의 자동 분석을 위한 딥러닝 모델 개발로 임상 환경에서 조기 발견 및 정밀 진단을 가능하게 합니다.',
+    },
+    {
+      number: '02',
+      name: '생체의학 신호 처리',
+      description: '신호 처리 기술과 머신러닝을 활용한 심전도, 뇌파 및 다중 모드 생체 신호의 고급 처리 및 해석으로 실시간 건강 모니터링을 구현합니다.',
+    },
+    {
+      number: '03',
+      name: '임상 데이터 분석',
+      description: '대규모 임상 데이터셋을 활용하여 패턴을 발견하고 결과를 예측하며 통계 모델링과 AI를 통한 근거 기반 의사 결정을 지원합니다.',
+    },
+    {
+      number: '04',
+      name: '중개 연구',
+      description: '실험실 발견을 임상 응용으로 연결하여 의료 기기 프로토타입부터 임상 검증 연구까지 AI 솔루션을 환자 치료에 제공합니다.',
+    },
+    {
+      number: '05',
+      name: '웨어러블 헬스 기술',
+      description: '스마트 심전도 패치 및 다중 센서 통합 플랫폼을 포함한 지속적인 건강 모니터링을 위한 AI 기반 웨어러블 기기 설계 및 검증.',
     },
   ],
 }

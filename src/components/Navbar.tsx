@@ -3,7 +3,7 @@ import { useLanguage } from '../context/LanguageContext'
 import ContactButton from './ContactButton'
 
 export default function Navbar() {
-  const { t, lang, toggleLang } = useLanguage()
+  const { t, langLabel, toggleLang } = useLanguage()
 
   const scrollTo = (id: string) => {
     const el = document.getElementById(id)
@@ -66,7 +66,7 @@ export default function Navbar() {
           onClick={toggleLang}
           className="ml-2 text-[#D7E2EA]/80 hover:text-[#D7E2EA] text-xs font-medium border border-[#D7E2EA]/30 rounded px-2.5 py-1 transition-colors"
         >
-          {lang === 'zh' ? 'EN' : '中'}
+          {langLabel}
         </button>
       </div>
 
@@ -75,7 +75,7 @@ export default function Navbar() {
           onClick={toggleLang}
           className="md:hidden text-[#D7E2EA]/80 hover:text-[#D7E2EA] text-xs font-medium border border-[#D7E2EA]/30 rounded px-2.5 py-1 transition-colors"
         >
-          {lang === 'zh' ? 'EN' : '中'}
+          {langLabel}
         </button>
         <ContactButton href={`mailto:${t.contact.email}`} />
       </div>
