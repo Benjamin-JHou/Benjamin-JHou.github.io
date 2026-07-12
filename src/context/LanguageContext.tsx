@@ -10,6 +10,7 @@ const langHtml: Record<Lang, string> = { zh: 'zh-CN', en: 'en', fr: 'fr', ko: 'k
 interface LanguageContextValue {
   lang: Lang
   toggleLang: () => void
+  setLang: (lang: Lang) => void
   langLabel: string
   t: LangContent
 }
@@ -44,7 +45,7 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
   const t = contentMap[lang]
 
   return (
-    <LanguageContext.Provider value={{ lang, toggleLang, langLabel: langLabel[lang], t }}>
+    <LanguageContext.Provider value={{ lang, toggleLang, setLang, langLabel: langLabel[lang], t }}>
       {children}
     </LanguageContext.Provider>
   )

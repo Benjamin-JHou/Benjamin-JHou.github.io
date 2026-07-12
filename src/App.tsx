@@ -12,7 +12,7 @@ import Gallery from './sections/Gallery'
 import Contact from './sections/Contact'
 import Footer from './components/Footer'
 import ScrollProgress from './components/ScrollProgress'
-import BackgroundOrbs from './components/BackgroundOrbs'
+import BackgroundEffects from './components/BackgroundEffects'
 import CustomCursor from './components/CustomCursor'
 import BackToTop from './components/BackToTop'
 import LoadingScreen from './components/LoadingScreen'
@@ -33,7 +33,7 @@ export default function App() {
 
       <CustomCursor />
       <ScrollProgress />
-      <BackgroundOrbs />
+      <BackgroundEffects />
       <BackToTop />
 
       {!loading && (

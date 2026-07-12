@@ -58,21 +58,23 @@ function ProjectCard({
       <CardGlow>
         <motion.div
           style={{ scale }}
-          className="relative w-full max-w-4xl border-2 border-[#D7E2EA] bg-[#0C0C0C]/90 backdrop-blur-sm p-5 sm:p-6 md:p-8 z-10"
+          className="relative p-[2px] bg-gradient-to-br from-[#7c3aed] via-[#3b82f6] to-[#ec4899] z-10"
         >
-          <div className="flex flex-col lg:flex-row gap-6 md:gap-8 items-start">
-            <div className="flex-1">
-              <span className="text-[#D7E2EA]/40 font-medium text-xs sm:text-sm uppercase tracking-widest">
-                {patent.field}
-              </span>
-              <h3 className="text-[#D7E2EA] font-bold text-[clamp(1.3rem,2.5vw,2rem)] mt-2 leading-tight">
-                {patent.name}
-              </h3>
-              <p className="text-[#D7E2EA]/60 font-light text-[clamp(0.85rem,1vw,1rem)] mt-4 leading-relaxed">
-                {patent.desc}
-              </p>
-              <div className="mt-6">
-                <LiveProjectButton>{t.viewDetails}</LiveProjectButton>
+          <div className="w-full max-w-4xl bg-[#0C0C0C] p-5 sm:p-6 md:p-8 rounded-[inherit]">
+            <div className="flex flex-col lg:flex-row gap-6 md:gap-8 items-start">
+              <div className="flex-1">
+                <span className="text-[#D7E2EA]/40 font-medium text-xs sm:text-sm uppercase tracking-widest">
+                  {patent.field}
+                </span>
+                <h3 className="text-[#D7E2EA] font-bold text-[clamp(1.3rem,2.5vw,2rem)] mt-2 leading-tight">
+                  {patent.name}
+                </h3>
+                <p className="text-[#D7E2EA]/60 font-light text-[clamp(0.85rem,1vw,1rem)] mt-4 leading-relaxed">
+                  {patent.desc}
+                </p>
+                <div className="mt-6">
+                  <LiveProjectButton>{t.viewDetails}</LiveProjectButton>
+                </div>
               </div>
             </div>
           </div>

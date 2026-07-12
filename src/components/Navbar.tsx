@@ -1,9 +1,10 @@
 import { motion } from 'framer-motion'
 import { useLanguage } from '../context/LanguageContext'
 import ContactButton from './ContactButton'
+import LanguageSelector from './LanguageSelector'
 
 export default function Navbar() {
-  const { t, langLabel, toggleLang } = useLanguage()
+  const { t } = useLanguage()
 
   const scrollTo = (id: string) => {
     const el = document.getElementById(id)
@@ -25,58 +26,29 @@ export default function Navbar() {
       </button>
 
       <div className="hidden md:flex items-center gap-6">
-        <button
-          onClick={() => scrollTo('about')}
-          className="text-[#D7E2EA]/70 hover:text-[#D7E2EA] transition-colors text-sm uppercase tracking-wider"
-        >
+        <button onClick={() => scrollTo('about')} className="text-[#D7E2EA]/70 hover:text-[#D7E2EA] transition-colors text-sm uppercase tracking-wider">
           {t.nav.about}
         </button>
-        <button
-          onClick={() => scrollTo('education')}
-          className="text-[#D7E2EA]/70 hover:text-[#D7E2EA] transition-colors text-sm uppercase tracking-wider"
-        >
+        <button onClick={() => scrollTo('education')} className="text-[#D7E2EA]/70 hover:text-[#D7E2EA] transition-colors text-sm uppercase tracking-wider">
           {t.nav.education}
         </button>
-        <button
-          onClick={() => scrollTo('expertise')}
-          className="text-[#D7E2EA]/70 hover:text-[#D7E2EA] transition-colors text-sm uppercase tracking-wider"
-        >
+        <button onClick={() => scrollTo('expertise')} className="text-[#D7E2EA]/70 hover:text-[#D7E2EA] transition-colors text-sm uppercase tracking-wider">
           {t.nav.expertise}
         </button>
-        <button
-          onClick={() => scrollTo('projects')}
-          className="text-[#D7E2EA]/70 hover:text-[#D7E2EA] transition-colors text-sm uppercase tracking-wider"
-        >
+        <button onClick={() => scrollTo('projects')} className="text-[#D7E2EA]/70 hover:text-[#D7E2EA] transition-colors text-sm uppercase tracking-wider">
           {t.nav.projects}
         </button>
-        <button
-          onClick={() => scrollTo('gallery')}
-          className="text-[#D7E2EA]/70 hover:text-[#D7E2EA] transition-colors text-sm uppercase tracking-wider"
-        >
+        <button onClick={() => scrollTo('gallery')} className="text-[#D7E2EA]/70 hover:text-[#D7E2EA] transition-colors text-sm uppercase tracking-wider">
           {t.nav.gallery}
         </button>
-        <button
-          onClick={() => scrollTo('contact')}
-          className="text-[#D7E2EA]/70 hover:text-[#D7E2EA] transition-colors text-sm uppercase tracking-wider"
-        >
+        <button onClick={() => scrollTo('contact')} className="text-[#D7E2EA]/70 hover:text-[#D7E2EA] transition-colors text-sm uppercase tracking-wider">
           {t.nav.contact}
         </button>
-
-        <button
-          onClick={toggleLang}
-          className="ml-2 text-[#D7E2EA]/80 hover:text-[#D7E2EA] text-xs font-medium border border-[#D7E2EA]/30 rounded px-2.5 py-1 transition-colors"
-        >
-          {langLabel}
-        </button>
+        <LanguageSelector />
       </div>
 
       <div className="flex items-center gap-3">
-        <button
-          onClick={toggleLang}
-          className="md:hidden text-[#D7E2EA]/80 hover:text-[#D7E2EA] text-xs font-medium border border-[#D7E2EA]/30 rounded px-2.5 py-1 transition-colors"
-        >
-          {langLabel}
-        </button>
+        <LanguageSelector />
         <ContactButton href={`mailto:${t.contact.email}`} />
       </div>
     </motion.nav>
