@@ -1,4 +1,5 @@
 import Magnet from './Magnet'
+import { useLanguage } from '../context/LanguageContext'
 
 interface ContactButtonProps {
   className?: string
@@ -7,6 +8,8 @@ interface ContactButtonProps {
 }
 
 export default function ContactButton({ className = '', onClick, href }: ContactButtonProps) {
+  const { t } = useLanguage()
+  const label = t.contact.actionBtn
   const button = (
     <button
       onClick={onClick}
@@ -29,7 +32,7 @@ export default function ContactButton({ className = '', onClick, href }: Contact
         outlineOffset: '-3px',
       }}
     >
-      Contact Me
+      {label}
     </button>
   )
 

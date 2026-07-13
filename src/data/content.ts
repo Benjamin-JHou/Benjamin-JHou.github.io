@@ -645,7 +645,53 @@ const patents_en = [
   },
 ]
 
-export const patents = { zh: patents_zh, en: patents_en, fr: patents_zh, ko: patents_zh }
+const patents_fr = [
+  {
+    name: 'Patch intelligent de surveillance ECG continue par IA',
+    field: 'Matériel médical intelligent',
+    desc: 'Un patch portable intelligent alimenté par des algorithmes d\'IA pour la surveillance électrocardiographique continue et en temps réel et la détection précoce des arythmies. Le système permet une surveillance cardiaque non invasive avec alerte automatique d\'anomalies pour les milieux cliniques et les soins à domicile.',
+  },
+  {
+    name: 'Logiciel de procédé d\'extraction pharmaceutique intelligente',
+    field: 'Informatique pharmaceutique',
+    desc: 'Une plateforme logicielle pilotée par l\'IA qui optimise les flux de travail d\'extraction de médicaments en contrôlant intelligemment les paramètres de procédé et en prédisant les rendements. Elle rationalise la fabrication pharmaceutique traditionnelle grâce à l\'automatisation pilotée par les données et à l\'assurance qualité.',
+  },
+  {
+    name: 'Logiciel de gestion de synthèse chimique pharmaceutique',
+    field: 'Chimio-informatique',
+    desc: 'Un système de gestion numérique complet pour suivre, optimiser et documenter les processus de synthèse chimique dans le développement de médicaments. Le logiciel intègre le suivi des réactions à une planification intelligente pour améliorer l\'efficacité du laboratoire et la conformité réglementaire.',
+  },
+  {
+    name: 'Système d\'analyse de données médicales',
+    field: 'Grands volumes de données médicales',
+    desc: 'Une plateforme d\'analyse intégrée conçue pour traiter, visualiser et tirer des informations exploitables de grands ensembles de données cliniques et biomédicales. Le système prend en charge les applications de médecine de précision grâce à la fusion multimodale de données et à la modélisation prédictive.',
+  },
+]
+
+const patents_ko = [
+  {
+    name: 'AI 연속 심전도 모니터링 스마트 패치',
+    field: '스마트 의료 하드웨어',
+    desc: 'AI 알고리즘으로 구동되는 지능형 웨어러블 패치로, 실시간 연속 심전도 모니터링과 조기 부정맥 감지를 제공합니다. 이 시스템은 임상 및 가정 간호 환경에서 자동 이상 알림과 함께 비침습적 심장 감시를 지원합니다.',
+  },
+  {
+    name: '지능형 의약 추출 공정 소프트웨어',
+    field: '제약 정보학',
+    desc: '공정 매개변수를 지능적으로 제어하고 수율을 예측하여 의약 추출 작업 흐름을 최적화하는 AI 기반 소프트웨어 플랫폼입니다. 데이터 기반 자동화와 품질 보증을 통해 기존 제약 제조 공정을 간소화합니다.',
+  },
+  {
+    name: '제약 화학 합성 관리 소프트웨어',
+    field: '화학정보학',
+    desc: '신약 개발 과정의 화학 합성 공정을 추적, 최적화 및 기록하는 포괄적인 디지털 관리 시스템입니다. 이 소프트웨어는 반응 모니터링과 지능형 스케줄링을 통합하여 실험실 효율성과 규정 준수를 향상시킵니다.',
+  },
+  {
+    name: '의료 데이터 분석 시스템',
+    field: '의료 빅데이터',
+    desc: '대규모 임상 및 생의학 데이터셋을 처리, 시각화하고 실행 가능한 인사이트를 도출하도록 설계된 통합 분석 플랫폼입니다. 이 시스템은 다중 모달 데이터 융합과 예측 모델링을 통해 정밀 의료 애플리케이션을 지원합니다.',
+  },
+]
+
+export const patents = { zh: patents_zh, en: patents_en, fr: patents_fr, ko: patents_ko }
 
 export const expertiseItems = {
   zh: [

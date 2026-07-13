@@ -44,7 +44,6 @@ export default function Navbar() {
         <button onClick={() => scrollTo('contact')} className="text-[#D7E2EA]/70 hover:text-[#D7E2EA] transition-colors text-sm uppercase tracking-wider">
           {t.nav.contact}
         </button>
-        <LanguageSelector />
       </div>
 
       <div className="flex items-center gap-3">

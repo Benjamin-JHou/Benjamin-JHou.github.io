@@ -122,14 +122,18 @@ export default function Hero() {
         <FadeIn delay={0.65} y={20}>
           <div className="flex gap-4">
             <a
-              href="#"
+              href="https://scholar.google.com/citations?hl=en&user=fsxyotsAAAAJ"
+              target="_blank"
+              rel="noopener noreferrer"
               className="flex items-center gap-2 text-[#D7E2EA]/40 hover:text-[#D7E2EA]/70 transition-colors text-xs sm:text-sm"
             >
               <BookOpen size={16} />
               {t.contact.googleScholar}
             </a>
             <a
-              href="#"
+              href="https://orcid.org/0000-0001-5931-1477"
+              target="_blank"
+              rel="noopener noreferrer"
               className="flex items-center gap-2 text-[#D7E2EA]/40 hover:text-[#D7E2EA]/70 transition-colors text-xs sm:text-sm"
             >
               <Award size={16} />
