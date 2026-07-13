@@ -17,7 +17,7 @@ export default function Hero() {
       id="hero"
       className="relative min-h-screen flex flex-col justify-center overflow-x-clip px-6 sm:px-10 md:px-16"
     >
-      <div className="flex flex-col lg:flex-row items-center lg:items-start lg:justify-between gap-10 lg:gap-16 max-w-7xl mx-auto w-full mt-20">
+      <div className="flex flex-col lg:flex-row items-center lg:items-start lg:justify-between gap-10 lg:gap-12 max-w-7xl mx-auto w-full mt-20">
         <div className="flex flex-col items-center lg:items-start text-center lg:text-left max-w-xl">
           <FadeIn delay={0.15} y={40}>
             <h1 className="hero-heading font-black text-[clamp(3rem,10vw,7rem)] leading-none">
@@ -107,7 +107,7 @@ export default function Hero() {
               animate={{ scale: [1, 1.15, 1], opacity: [0.6, 1, 0.6] }}
               transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
             />
-            <div className="relative w-48 h-48 sm:w-56 sm:h-56 md:w-72 md:h-72 rounded-full overflow-hidden border-2 border-[#D7E2EA]/20">
+            <div className="relative w-48 h-48 sm:w-56 sm:h-56 md:w-72 md:h-72 lg:w-96 lg:h-96 xl:w-[28rem] xl:h-[28rem] rounded-full overflow-hidden border-2 border-[#D7E2EA]/20">
               <img
                 src="/avatar.jpg"
                 alt={t.hero.name}

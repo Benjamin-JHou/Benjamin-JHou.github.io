@@ -17,7 +17,7 @@ export default function AnimatedText({ text, className = '', style }: AnimatedTe
   const chars = text.split('')
 
   return (
-    <p ref={ref} className={className} style={style}>
+    <p ref={ref} className={`${className} w-full break-words`} style={style}>
       {chars.map((char, i) => {
         const start = i / chars.length
         const end = start + 0.5 / chars.length
@@ -50,7 +50,7 @@ function CharSpan({
   const opacity = useTransform(scrollYProgress, [start, end], [0.2, 1])
 
   if (char === ' ') {
-    return <span className="inline">&nbsp;</span>
+    return <span className="inline">{' '}</span>
   }
 
   return (

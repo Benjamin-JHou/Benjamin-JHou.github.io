@@ -16,7 +16,7 @@ export default function About() {
 
       <AnimatedText
         text={t.about.paragraph}
-        className="text-[#D7E2EA] font-medium text-center leading-relaxed max-w-[560px] mx-auto"
+        className="text-[#D7E2EA] font-medium text-center leading-relaxed max-w-2xl mx-auto"
         style={{ fontSize: 'clamp(1rem, 2vw, 1.35rem)' }}
       />
 
